@@ -198,7 +198,6 @@ node_modules/
 bower_components/
 *.log
 
-lib/
 test/*.js
 test/*.map
 tmp/
