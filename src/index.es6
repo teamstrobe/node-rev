@@ -16,7 +16,7 @@ export default function(options) {
   const outputDest = path.resolve(outputDir)
   const file = options.file
   const hash = options.hash || false
-  const keepOriginals = options.keepOriginals || true
+  const removeOriginals = options.removeOriginals || false
 
   function writeManifest(manifest) {
     if (file) {
@@ -61,7 +61,7 @@ export default function(options) {
         fs.writeFileSync(path.join(outputDest, path.join(fileDir, filename)), buffer)
       }
 
-      if (!keepOriginals) {
+      if (removeOriginals) {
         fs.unlinkSync(file);
       }
     })
