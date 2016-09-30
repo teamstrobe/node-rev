@@ -12,7 +12,8 @@ const manifest = nodeRev({
   files: argv._[0],
   outputDir: argv.o,
   file: argv.file,
-  hash: argv.hash
+  hash: argv.hash,
+  keepOriginals: argv.keepOriginals
 })
 
 process.exit()
